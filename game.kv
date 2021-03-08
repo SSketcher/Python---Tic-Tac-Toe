@@ -1,0 +1,68 @@
+#:kivy 2.0
+
+<Button>
+    background_normal: ''
+    color: (13/255, 13/255, 13/255, 1)
+    font_size: 20
+    width: 100
+    height: 100
+
+<TicTacTou>
+    canvas.before:
+        Color:
+            rgba: (63/255, 167/255, 214/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        GridLayout:
+            cols: 3
+            rows: 3
+            padding: 25
+            spacing: 15
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+            Button:
+                text: 'x'
+
+        GridLayout:
+            cols: 2
+            rows: 1
+            padding: 5
+            spacing: 5
+            size_hint: (1, 0.1)
+
+            Label:
+                id: 'player_1'
+                text: 'Player 1'
+
+            Label:
+                id: 'player_2'
+                text: 'Player 2'
